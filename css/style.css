@@ -210,7 +210,7 @@ b {
     height: 18rem;
     margin-right: 3rem;
 }
-#info .map iframe {
+#info #map iframe {
     width: 100%;
     height: 20rem;
 }
@@ -271,7 +271,7 @@ b {
         height: 18rem;
         margin: 0 auto 4rem;
     }
-    #info .map iframe {
+    #info #map iframe {
         height: 18rem;
     }
     #info .info-txt p {
