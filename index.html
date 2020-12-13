@@ -63,7 +63,7 @@
             <h3>Information</h3>
             <div class="container">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.1258285359295!2d126.6636971513076!3d37.410500679728386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b776287b4c87b%3A0xef744c3d4c9c159!2z7ISc7ZW06re4656R67iU!5e0!3m2!1sko!2skr!4v1607829924116!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.1258285359295!2d126.6636971513076!3d37.410500679728386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b776287b4c87b%3A0xef744c3d4c9c159!2z7ISc7ZW06re4656R67iU!5e0!3m2!1sko!2skr!4v1607829924116!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
                 </div>
                 <div class="info-txt">
                     <p><i class="xi-maker"></i>인천시 연수구 동춘동</p>
@@ -74,5 +74,30 @@
         </section>
         <!-- INFO -->
     </div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d80abf29d1cd1c9cf479049c23111cda"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+        
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+        
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+        
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);    
+    </script>
 </body>
 </html>
