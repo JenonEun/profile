@@ -59,6 +59,7 @@ a {
 html {
     scroll-behavior: smooth;
     font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 .container {
     width: 1200px;
@@ -112,13 +113,34 @@ b {
 #header #check:checked ~ nav {
     left: 0%;
 }
-#header nav ul {}
+#header nav ul {
+    padding: 10%;
+}
 #header nav ul li {
-    margin: 40px 0;
+    margin: 4rem 0;
+    position: relative;
 }
 #header nav ul li a {
-    font-size: 4rem;
+    font-size: 2rem;
     color: #333;
+    font-weight: bold;
+    display: block;
+    transition: color 1s;
+}
+#header nav ul li a:hover {
+    color: #FC466B;
+}
+#header nav ul li span {
+    transition: width 1s;
+    display: block;
+    width: 0;
+    height: 0.25rem;
+    background: #FC466B;
+    position: absolute;
+    margin-top: 0.5rem;
+}
+#header nav ul li a:hover ~ span {
+    width: 100%;
 }
 /* HEADER AREA */
 
@@ -234,6 +256,13 @@ b {
         width: 100%;
     }
     /* COMMON AREA */
+
+    /* HEADER AREA */
+    #header nav {
+        width: 70%;
+        left: -80%;
+    }
+    /* HEADER AREA */
 
     /* MAIN AREA */
     #main h2 {
