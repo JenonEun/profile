@@ -207,6 +207,7 @@ b {
 }
 #info .map {
     width: 40%;
+    height: 18rem;
     margin-right: 3rem;
 }
 #info .map iframe {
